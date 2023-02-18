@@ -1,0 +1,25 @@
+/* 变量声明 */
+
+// 产品主色 primary
+$--ac-color-primary: #1FBE49; 
+$--ac-bg-primary: linear-gradient(270deg, #57D979 0%, #1FBE49 100%); //按钮主色
+
+// 提示色 info
+$--ac-color-info: #666666; 
+$--ac-bg-info: #666666;
+
+// 警告色 warning
+$--ac-color-warning: #FF4536; 
+$--ac-bg-warning: #FF4536;
+
+// 紫色 purple
+$--ac-color-purple: #6B54D4;
+$--ac-bg-purple: #6B54D4;
+
+// 蓝色 blue 
+$--ac-color-blue: #4169F3;
+$--ac-bg-blue: #4169F3;
+
+// 黄色 yellow
+$--ac-color-yellow: #FFA300;
+$--ac-bg-yellow: #FFA300;

@@ -1,0 +1,304 @@
+{
+  // 全局组件
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "u-empty": "@/components/u-empty/u-empty.vue",
+      "u-dropdown": "@/components/u-dropdown/u-dropdown.vue",
+      "u-dropdown-item": "@/components/u-dropdown-item/u-dropdown-item.vue",
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+      "^ac-(.*)": "app-comment/components/ac-$1/ac-$1.vue",
+      "uni-search-bar": "@/components/uni-search-bar/uni-search-bar.vue",
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  // 全局样式
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小程序框架",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f7f6f9"
+  },
+  // tabBar
+  "tabBar": {
+    "list": [
+      { "pagePath": "pages/index", "text": "首页", "iconPath": "static/tab-bar/home.png", "selectedIconPath": "static/tab-bar/home-active.png" },
+      { "pagePath": "pages/activity", "text": "活动", "iconPath": "static/tab-bar/activity.png", "selectedIconPath": "static/tab-bar/activity-active.png" },
+      { "pagePath": "pages/message", "text": "消息", "iconPath": "static/tab-bar/message.png", "selectedIconPath": "static/tab-bar/message-active.png" },
+      { "pagePath": "pages/mine", "text": "我的", "iconPath": "static/tab-bar/mine.png", "selectedIconPath": "static/tab-bar/mine-active.png" }
+    ],
+    "color": "##afadb5",
+    "selectedColor": "#11c387",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white"
+  },
+  // 页面
+  "pages": [
+    // tabBar
+    { "path": "pages/index", "style": { "enablePullDownRefresh": true, "navigationStyle": "custom" } },
+    { "path": "pages/activity", "style": { "navigationBarTitleText": "活动", "enablePullDownRefresh": true } },
+    { "path": "pages/message", "style": { "navigationBarTitleText": "消息" } },
+    { "path": "pages/mine", "style": { "navigationStyle": "custom" } },
+
+    // 登录
+    { "path": "pages/login/login", "style": { "navigationBarTitleText": "登录" } },
+    { "path": "pages/login/agreement", "style": { "navigationBarTitleText": "用户协议" } },
+    { "path": "pages/login/privacy", "style": { "navigationBarTitleText": "隐私政策" } },
+    { "path": "pages/login/login-account", "style": { "navigationBarTitleText": "登录" } },
+    { "path": "pages/login/register", "style": { "navigationBarTitleText": "注册账号" } },
+    { "path": "pages/login/retrieve", "style": { "navigationBarTitleText": "找回密码" } },
+    { "path": "pages/login/retrieve/success", "style": { "navigationBarTitleText": "密码设置成功" } },
+    { "path": "pages/cropper/cropper", "style": { "navigationBarTitleText": "图片裁剪" } },
+    { "path": "pages/cropper/cropper_bak", "style": { "navigationBarTitleText": "图片裁剪" } },
+
+    // 投资经理
+    { "path": "pages/manager/home", "style": { "navigationBarTitleText": "投资经理", "enablePullDownRefresh": true } },
+    { "path": "pages/manager/list", "style": { "navigationBarTitleText": "共享投资经理", "enablePullDownRefresh": true } },
+    { "path": "pages/manager/detail", "style": { "navigationBarTitleText": "投资经理详情" } },
+    { "path": "pages/manager/credibility", "style": { "navigationBarTitleText": "诚信指数" } },
+    
+    // 投资机构
+    { "path": "pages/organization/home", "style": { "navigationBarTitleText": "投资机构", "enablePullDownRefresh": true } },
+    { "path": "pages/organization/org-list", "style": { "navigationBarTitleText": "投资机构列表"} },    
+    { "path": "pages/organization/list", "style": { "navigationBarTitleText": "搜索结果", "enablePullDownRefresh": true } },
+    { "path": "pages/organization/list-more", "style": { "navigationBarTitleText": "投资机构", "enablePullDownRefresh": true } },
+    { "path": "pages/organization/detail", "style": { "navigationBarTitleText": "投资机构详情" } },
+    { "path": "pages/organization/credibility", "style": { "navigationBarTitleText": "诚信指数" } },
+
+    // 观察人
+    { "path": "pages/observer/home", "style": { "navigationBarTitleText": "指导单位", "enablePullDownRefresh": true } },
+    { "path": "pages/observer/list", "style": { "navigationBarTitleText": "搜索结果", "enablePullDownRefresh": true } },
+    { "path": "pages/observer/detail", "style": { "navigationBarTitleText": "指导单位详情" } },
+    { "path": "pages/observer/credibility", "style": { "navigationBarTitleText": "诚信指数" } },
+
+    // 企业
+    { "path": "pages/company/home", "style": { "navigationBarTitleText": "企业" } },
+    { "path": "pages/company/detail", "style": { "navigationBarTitleText": "企业详情" } },
+    { "path": "pages/company/search", "style": { "navigationBarTitleText": "搜索企业" } },
+    { "path": "pages/company/list", "style": { "navigationBarTitleText": "搜索企业" } },
+    // 项目池
+    { "path": "pages/project/home", "style": { "navigationBarTitleText": "项目池列表", "enablePullDownRefresh": true } },
+    { "path": "pages/project/list", "style": { "navigationBarTitleText": "搜索结果", "enablePullDownRefresh": true } },
+    { "path": "pages/project/detail", "style": { "navigationBarTitleText": "项目详情", "app-plus": { "bounce": "none" } } },
+    { "path": "pages/project/success", "style": { "navigationBarTitleText": "申请结果" }},
+    { "path": "pages/project/bpFile", "style": { "navigationBarTitleText": "浏览BP" }},
+    
+ 
+    // 公告
+    { "path": "pages/notice/list", "style": { "navigationBarTitleText": "通知" } },
+    { "path": "pages/notice/detail", "style": { "navigationBarTitleText": "通知" } },
+
+    // 公告
+    { "path": "pages/announcement/list", "style": { "navigationBarTitleText": "公告" } },
+    { "path": "pages/announcement/detail", "style": { "navigationBarTitleText": "公告" } },
+
+    // 关于我们
+    { "path": "pages/about/detail", "style": { "navigationBarTitleText": "关于我们" } },
+    // 数据看板
+    { "path": "pages/about/board", "style": { "navigationBarTitleText": "数据看板" } },
+
+    // 通知（首页那个）
+    { "path": "pages/notify/list", "style": { "navigationBarTitleText": "通知" } },
+    { "path": "pages/notify/detail", "style": { "navigationBarTitleText": "通知" } },
+
+    // 消息
+    { "path": "pages/message/search", "style": { "navigationBarTitleText": "消息" } },
+    { "path": "pages/message/chat", "style": { "navigationBarTitleText": "盟聊" } },
+
+    // 审核列表
+    { "path": "pages/review/list", "style": { "navigationBarTitleText": "待办审核" } },
+    // 审核详情
+    { "path": "pages/review/detail", "style": { "navigationBarTitleText": "审核详情" } },
+    // 申请记录
+    { "path": "pages/application/list", "style": { "navigationBarTitleText": "申请记录" } },
+    // 申请详情
+    { "path": "pages/application/detail", "style": { "navigationBarTitleText": "申请详情" } }
+
+    // pc跳转签名
+    { "path": "pages/authentication/sign", "style": { "navigationBarTitleText": "签名" } }
+  ],
+  // 分包
+  "subPackages": [
+    {
+      // 点评插件
+      "root":"plugins/app-comment/packages",
+      "pages": [
+        { "path": "list/list", "style": { "navigationBarTitleText": "点评列表" } },
+        { "path": "form/create", "style": { "navigationBarTitleText": "写点评" } },
+        { "path": "detail/detail", "style": { "navigationBarTitleText": "点评详情" } },
+        { "path": "my-comment/my-comment", "style": { "navigationBarTitleText": "点评与点赞" } },
+        { "path": "search/search", "style": { "navigationBarTitleText": "搜索" } },
+        { "path": "search-result/search-result", "style": { "navigationBarTitleText": "搜索结果" } }
+      ]
+    },
+    {
+      "root":"pages/features-page",
+      "pages": [
+        { "path": "invite", "style": { "navigationBarTitleText": "邀请确权" } },
+        { "path": "inviteDraf", "style": { "navigationBarTitleText": "邀请确权" } },
+        { "path": "inviteAuth", "style": { "navigationBarTitleText": "邀请确权人" } },
+        { "path": "region-city-selection", "style": { "navigationBarTitleText": "市级选择" } },
+        { "path": "search", "style": { "navigationBarTitleText": "搜索" } },
+        { "path": "inputUpdate", "style": { "navigationBarTitleText": "资料修改" } },
+        { "path": "emailPhoneUpdate", "style": { "navigationBarTitleText": "资料修改" } },
+        { "path": "select-fileds", "style": { "navigationBarTitleText": "选择投资领域" } },
+        { "path": "select-rounds", "style": { "navigationBarTitleText": "选择投资轮次" } },
+        { "path": "select-industry", "style": { "navigationBarTitleText": "选择所属行业" } }
+      ]
+    },
+    {
+      // 活动
+      "root":"pages/activity",
+      "pages": [
+        { "path": "detail", "style": { "navigationBarTitleText": "活动详情" } },
+        { "path": "apply", "style": { "navigationBarTitleText": "报名" } },
+        { "path": "signin", "style": { "navigationBarTitleText": "签到" } },
+        { "path": "apply/list", "style": { "navigationBarTitleText": "报名人列表" } },
+        { "path": "signin/list", "style": { "navigationBarTitleText": "签到列表" } },
+        { "path": "apply/detail", "style": { "navigationBarTitleText": "报名详情" } },
+        { "path": "signin/detail", "style": { "navigationBarTitleText": "签到详情" } }
+      ]
+    },
+    {
+     "root":"pages/mine-identity",
+     "pages": [
+         // 投资经理 认证
+      { "path": "manager/index", "style": { "navigationBarTitleText": "投资经理认证" } },
+      { "path": "manager/introduce", "style": { "navigationBarTitleText": "个人简介" } },
+      { "path": "manager/base", "style": { "navigationBarTitleText": "基本信息" } },
+      { "path": "manager/favor", "style": { "navigationBarTitleText": "投资偏好" } },
+      { "path": "manager/authentication", "style": { "navigationBarTitleText": "投资经理认证" } },
+      { "path": "manager/agreement", "style": { "navigationBarTitleText": "投盟公约" } },
+      { "path": "manager/info", "style": { "navigationBarTitleText": "资料管理" } },
+      { "path": "manager/edit-relative", "style": { "navigationBarTitleText": "所属投资机构" } },
+      { "path": "manager/relative-organization", "style": { "navigationBarTitleText": "所属投资机构" } },
+
+      // 投资机构 认证
+      { "path": "organization/index", "style": { "navigationBarTitleText": "投资机构认证" } },
+      { "path": "organization/introduce", "style": { "navigationBarTitleText": "单位简介" } },
+      { "path": "organization/base", "style": { "navigationBarTitleText": "基本信息" } },
+      { "path": "organization/favor", "style": { "navigationBarTitleText": "投资偏好" } },
+      { "path": "organization/legalperson", "style": { "navigationBarTitleText": "法定代表人" } },
+      { "path": "organization/chargeperson", "style": { "navigationBarTitleText": "单位联系人" } },
+      { "path": "organization/honr", "style": { "navigationBarTitleText": "荣誉奖励" } },
+      { "path": "organization/businescope", "style": { "navigationBarTitleText": "上传盖章" } },
+      { "path": "organization/extract-file", "style": { "navigationBarTitleText": "申请表图片" } },
+      { "path": "organization/agreement", "style": { "navigationBarTitleText": "投盟公约" } },
+      { "path": "organization/info", "style": { "navigationBarTitleText": "资料管理" } },
+      { "path": "organization/certification-state", "style": { "navigationBarTitleText": "资料确认成功" } },
+
+      // 企业 认证
+      { "path": "enterprise/detail", "style": { "navigationBarTitleText": "企业基本信息" } },
+      { "path": "enterprise/introduce", "style": { "navigationBarTitleText": "公司简介" } },
+      { "path": "enterprise/base", "style": { "navigationBarTitleText": "基本信息" } },
+      { "path": "enterprise/chargeperson", "style": { "navigationBarTitleText": "单位联系人" } },
+      { "path": "enterprise/index", "style": { "navigationBarTitleText": "企业认证" } },
+      { "path": "enterprise/certification-state", "style": { "navigationBarTitleText": "企业认证结果" } },
+      { "path": "enterprise/agreement", "style": { "navigationBarTitleText": "投盟公约" } },
+      { "path": "enterprise/info", "style": { "navigationBarTitleText": "资料管理" } },
+      { "path": "enterprise/recommended", "style": { "navigationBarTitleText": "推荐单位" } },
+
+      // 指导单位 认证
+      { "path": "observer/index", "style": { "navigationBarTitleText": "申请指导单位" } },
+      { "path": "observer/introduce", "style": { "navigationBarTitleText": "单位简介" } },
+      { "path": "observer/base", "style": { "navigationBarTitleText": "基本信息" } },
+      { "path": "observer/chargeperson", "style": { "navigationBarTitleText": "单位联系人" } },
+      { "path": "observer/agreement", "style": { "navigationBarTitleText": "投盟公约" } },
+      { "path": "observer/info", "style": { "navigationBarTitleText": "资料管理" } },
+      { "path": "observer/businescope", "style": { "navigationBarTitleText": "上传营业执照" } },
+
+      // 机构投资经理管理
+      { "path": "organization-manage/manager-list", "style": { "navigationBarTitleText": "投资经理管理" } },
+      { "path": "organization-manage/state", "style": { "navigationBarTitleText": "提交结果" } },
+      { "path": "organization-manage/invite-manager", "style": { "navigationBarTitleText": "选择投资经理" } },
+      { "path": "organization-manage/invite-organization", "style": { "navigationBarTitleText": "选择投资机构" } },
+
+      // 子账号管理
+      { "path": "account-manage/account-list", "style": { "navigationBarTitleText": "子账号管理" } },
+      { "path": "account-manage/state", "style": { "navigationBarTitleText": "申请结果" } },
+      { "path": "account-manage/state-relative", "style": { "navigationBarTitleText": "提交结果" } },
+      { "path": "account-manage/invite-account", "style": { "navigationBarTitleText": "邀请子账号" } },
+      { "path": "account-manage/role-list", "style": { "navigationBarTitleText": "账号管理" } },
+
+      //  "转让账号管理"
+      { "path": "role-manage/role-list", "style": { "navigationBarTitleText": "账号管理" } },
+      { "path": "role-manage/role-sub-list", "style": { "navigationBarTitleText": "转让管理员" } }
+
+     ]
+    },
+    {
+     "root":"pages/mine",
+     "pages": [
+      
+        // 我的
+        { "path": "credibility", "style": { "navigationBarTitleText": "诚信指数" } },
+        { "path": "certification", "style": { "navigationBarTitleText": "我的认证" } },
+        { "path": "certification-state", "style": { "navigationBarTitleText": "身份认证" } },
+        { "path": "certification-state-fail", "style": { "navigationBarTitleText": "身份认证" } },
+        { "path": "activity", "style": { "navigationBarTitleText": "参与活动" } },
+        { "path": "rule", "style": { "navigationBarTitleText": "投盟公约" } },
+        { "path": "invite", "style": { "navigationBarTitleText": "邀请好友" } },
+        { "path": "setup", "style": { "navigationBarTitleText": "设置" } },
+        { "path": "activity/activity-manage", "style": { "navigationBarTitleText": "活动管理" } },
+        { "path": "activity/activity-mine", "style": { "navigationBarTitleText": "参与活动" } },
+        { "path": "activity/detail-manage", "style": { "navigationBarTitleText": "活动详情" } },
+        { "path": "activity/draft-list", "style": { "navigationBarTitleText": "草稿" } },
+        { "path": "activity/form-view", "style": { "navigationBarTitleText": "发起活动" } },
+        { "path": "activity/form-base", "style": { "navigationBarTitleText": "基本信息" } },
+        { "path": "activity/form-introduce", "style": { "navigationBarTitleText": "详情介绍" } },
+        { "path": "activity/form-success", "style": { "navigationBarTitleText": "发布结果" } },
+        { "path": "activity/edit-view", "style": { "navigationBarTitleText": "编辑活动" } },
+        { "path": "activity/edit-base", "style": { "navigationBarTitleText": "基本信息" } },
+        { "path": "activity/edit-introduce", "style": { "navigationBarTitleText": "详情介绍" } },
+        { "path": "rule/signList", "style": { "navigationBarTitleText": "查看签名" } },
+        { "path": "setup/avatar", "style": { "navigationBarTitleText": "设置头像" } },
+        { "path": "setup/name", "style": { "navigationBarTitleText": "设置名称" } },
+        { "path": "setup/account", "style": { "navigationBarTitleText": "账号切换" } },
+        { "path": "setup/account/create", "style": { "navigationBarTitleText": "添加账号" } },
+        { "path": "setup/safety", "style": { "navigationBarTitleText": "账号与安全" } },
+        { "path": "setup/safety/account", "style": { "navigationBarTitleText": "账号" } },
+        { "path": "setup/safety/phone", "style": { "navigationBarTitleText": "绑定手机号" } },
+        { "path": "setup/safety/mail", "style": { "navigationBarTitleText": "绑定邮箱" } },
+        { "path": "setup/safety/password", "style": { "navigationBarTitleText": "设置密码" } },
+        { "path": "cooperation/cooperation", "style": { "navigationBarTitleText": "协助确权" } },
+        { "path": "cooperation/detail", "style": { "navigationBarTitleText": "协助确权详情" } },
+        { "path": "cooperation/bpDetail", "style": { "navigationBarTitleText": "项目确权详情" } },
+        { "path": "signature/signature", "style": { "navigationBarTitleText": "签名" } },
+        { "path": "project/project", "style": { "navigationBarTitleText": "我的项目" } },
+        { "path": "project/detail", "style": { "navigationBarTitleText": "项目详情" } },
+        { "path": "identity/person", "style": { "navigationBarTitleText": "实名认证" } },
+        { "path": "identity/person-info", "style": { "navigationBarTitleText": "实名认证" } },
+        { "path": "identity/company", "style": { "navigationBarTitleText": "企业资质认证" } },
+        { "path": "change-role", "style": { "navigationBarTitleText": "身份切换" } },
+        { "path": "change/password", "style": { "navigationBarTitleText": "密码设置" } },
+        { "path": "change/account", "style": { "navigationBarTitleText": "账号设置" } },
+        { "path": "bind/bind-history", "style": { "navigationBarTitleText": "手机号绑定" } },
+        { "path": "bind/bind-new", "style": { "navigationBarTitleText": "手机号绑定" } },
+        { "path": "bind/bind-success", "style": { "navigationBarTitleText": "更换手机号" } },
+        { "path": "email/bind-history", "style": { "navigationBarTitleText": "更换邮箱" } },
+        { "path": "email/bind-new", "style": { "navigationBarTitleText": "邮箱绑定" } },
+        { "path": "email/bind-success", "style": { "navigationBarTitleText": "绑定成功" } },
+        // { "path": "bind/state", "style": { "navigationBarTitleText": "`更换手机号`" } },
+        { "path": "relation", "style": { "navigationBarTitleText": "关系图谱" } },
+        { "path": "relation-list", "style": { "navigationBarTitleText": "关系列表" } },
+        { "path": "collectProject/list", "style": { "navigationBarTitleText": "收藏夹" } },
+        { "path": "project/bp-access", "style": { "navigationBarTitleText": "BP公开权限管理" } },
+        { "path": "project/bp-auth", "style": { "navigationBarTitleText": "确权管理" } }
+
+     ]
+    }
+  ],
+  // 预加载分包
+  "preloadRule": {
+  },
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

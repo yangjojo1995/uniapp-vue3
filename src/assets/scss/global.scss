@@ -1,0 +1,352 @@
+// 公共类
+@import './utilities';
+@import './var';
+
+$base-size: 1rpx;
+$spacing-types: (
+  m: margin,
+  p: padding,
+);
+$text-color: (
+  primary: #333,
+  secondary: #666,
+  third: #999,
+);
+$directions: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+$flex-jc: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+);
+
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+);
+
+$flex-contents: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  between: space-between,
+  around: space-around,
+);
+page {
+  min-height: 100vh;
+  background-color: #F7F7F7;;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-jc-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-ai-center {
+  display: flex;
+  align-items: center;
+}
+.arrow {
+  width: 12rpx;
+  height: 24rpx;
+  min-width: 12rpx;
+}
+.stricky {
+  position: sticky;
+  top: 0;
+}
+.safe {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.u-text-center {
+  text-align: center;
+}
+.required {
+  position: relative;
+  // &:before {
+  //   content: '*';
+  //   width: 10rpx;
+  //   height: 36rpx;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: -20rpx;
+  //   line-height: 36rpx;
+  //   transform: translateY(-50%);
+  //   text-align: center;
+  //   color: red;
+  //   font-size: 28rpx;
+  // }
+  .action-text {
+    position: relative;
+    &:before {
+      content: "*";
+      height: 36rpx;
+      position: absolute;
+      top: 18rpx;
+      left: 104%;
+      transform: translateY(-50%);
+      text-align: center;
+      color: red;
+      font-size: 28rpx;
+    }
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.require {
+  color: #ff4536;
+  font-size: 24rpx;
+  margin-right: 4rpx;
+}
+
+.next-btn {
+  background: linear-gradient(270deg, #57d979 0%, #1fbe49 100%);
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 624rpx;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 24rpx 0;
+}
+
+.footer-btn-wrap {
+  width: 100%;
+  height: 146rpx;
+  background: #ffffff;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  .footer-inner {
+    background: #fff;
+    padding: 32rpx 32rpx 32rpx 32rpx;
+    box-shadow: 0 2rpx 2rpx 0 rgba(153, 153, 153, 0.15) inset;
+  }
+}
+.ta-justify {
+  text-align: justify;
+}
+.footer-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  .footer-inner {
+    background: #fff;
+    padding: 32rpx 32rpx 32rpx 32rpx;
+    box-shadow: 0 2rpx 2rpx 0 rgba(153, 153, 153, 0.15) inset;
+  }
+}
+.my-base-card {
+  margin: 20rpx 24rpx;
+  padding-bottom: 180rpx;
+}
+.required-s {
+  position: relative;
+  &:before {
+    content: '*';
+    width: 10rpx;
+    height: 36rpx;
+    position: absolute;
+    top: 48rpx;
+    left: -20rpx;
+    line-height: 36rpx;
+    text-align: center;
+    color: red;
+    font-size: 28rpx;
+  }
+}
+.required-t {
+  position: relative;
+  &:before {
+    content: '*';
+    width: 10rpx;
+    height: 36rpx;
+    position: absolute;
+    top: 20%;
+    left: -20rpx;
+    line-height: 36rpx;
+    transform: translateY(-50%);
+    text-align: center;
+    color: red;
+    font-size: 28rpx;
+  }
+}
+
+//  详情  禁用状态下，调整卡片高度
+.enable-state{
+  height:300rpx !important;
+}
+@each $typeKey, $value in $text-color {
+  .text-color-#{$typeKey} {
+    color: $value;
+  }
+}
+@each $typeKey, $value in $flex-jc {
+  .jc-#{$typeKey} {
+    justify-content: $value;
+  }
+}
+
+@each $typeKey, $value in $flex-ai {
+  .ai-#{$typeKey} {
+    align-items: $value;
+  }
+}
+
+@each $typeKey, $value in $flex-contents {
+  .ac-#{$typeKey} {
+    align-content: $value;
+  }
+}
+
+// 定义内外边距，历遍1-80
+@for $i from 0 through 80 {
+  // 只要双数和能被5除尽的数
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    // 得出：m-30
+    @each $typeKey, $type in $directions {
+      // u-m-t  u-p-t
+      .u-m-#{$typeKey}-#{$i} {
+        margin-#{$type}: $i * $base-size;
+      }
+      .u-p-#{$typeKey}-#{$i} {
+        padding-#{$type}: $i * $base-size;
+      }
+    }
+  }
+}
+
+@for $i from 0 through 80 {
+  // 只要双数和能被5除尽的数
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    // 得出：m-30
+    @each $typeKey, $type in $spacing-types {
+      // mx- my-
+      .u-#{$typeKey}-x-#{$i} {
+        #{$type}-left: $i * $base-size;
+        #{$type}-right: $i * $base-size;
+      }
+      .u-#{$typeKey}-y-#{$i} {
+        #{$type}-top: $i * $base-size;
+        #{$type}-bottom: $i * $base-size;
+      }
+      .u-#{$typeKey}-#{$i} {
+        #{$type}: $i * $base-size;
+      }
+    }
+  }
+}
+
+@for $i from 18 through 56 {
+  .fs-#{$i} {
+    font-size: $i * $base-size;
+  }
+}
+
+//
+.u-input__content__field-wrapper__field {
+  font-size: 28rpx !important;
+  padding-right: 0 !important;
+}
+.u-input {
+  padding-right: 0 !important;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.word-break {
+  word-break: break-all;
+}
+
+.c-open {
+  color: #01be79;
+}
+.c-close {
+  color: #ff4536;
+}
+
+// 各种企业详情及诚信指数页公共样式
+.chengxinzhishu-bg{
+  width: 484rpx;
+  height: 404rpx;
+  position: absolute;
+  top: -149rpx;
+  left:auto;
+  right: -18rpx;
+  z-index: 1;
+}
+.chengxinzhishu-icon{
+  margin-right: 8rpx;
+  width: 25rpx;
+  height: 25rpx;
+}
+.chengxinzhishu-wrapper{
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}

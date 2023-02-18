@@ -1,0 +1,33 @@
+
+// 换行
+.ym-text-wrap { word-break: break-word !important; white-space: normal !important; }
+.ym-text-nowrap { word-break: break-word !important; white-space: nowrap !important }
+.ym-text-pre-line { word-break: break-word !important; white-space: pre-line !important }
+.ym-text-pre-wrap { word-break: break-word !important; white-space: pre-wrap !important }
+.ym-text-truncate { overflow: hidden !important;; text-overflow: ellipsis !important;; word-break: break-word !important; white-space: nowrap !important; }
+
+// 右箭头
+.ym-arrow-icon{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANJJREFUSEvN1TEOwjAMBVA7Su7QnYkbwAF6ApZKTa5GhuQcjGwwwsbKBkdwVcSAKtq4tirInv/i2EoQFl64cD78Fsg5b4hoh4jRe3+RVDtZQUrpDgAVADyNMXXbtqe5yCSQcz4S0fYdKkImgRhjZa09AMBaihSbrEWKQH9yDcICNAgbkCKzgBHkFkJYjY3vfwHDZiPig4jqEMJZXYEkvEdZVyQNZwGa8CKgDS8Cn48dp6HfGs16rqXhnApeH45zbt80zXXuX1AEJIHDPawx1UCLAx1hgIkZF58obQAAAABJRU5ErkJggg==');
+  background-size: 100% 100%;
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+}
+// 提供了一个 高度为100%，宽度为32rpx，垂直居中水平靠右，且不可压缩的一个容器，适合放在盒子布局的最右侧作为箭头图标的容器
+.ym-arrow-box{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 32rpx;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+// 提供了一个上下间距20rpx，左右间距24rpx的白色背景圆角盒子
+.ym-card {
+  margin: 24rpx;
+  width: 702rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+}

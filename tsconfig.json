@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": false,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["@dcloudio/types"],
+    "baseUrl": ".",
+    "paths":{
+      "@/*": ["src/*"],
+      "uview-ui": ["src/plugins/uview-ui"],
+      "uview-ui/*": ["src/plugins/uview-ui/*"],
+      "app-comment": ["src/plugins/app-comment"],
+      "app-comment/*": ["src/plugins/app-comment/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "dist", "src/plugins/uview-ui**/**"],
+}

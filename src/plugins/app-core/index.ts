@@ -1,0 +1,10 @@
+export { configKey, useConfig } from './useConfig'
+export { serviceKey, useService } from './useService'
+export { routerKey, useRouter } from './useRouter'
+export { getToken, setToken, getUserInfo, setUserInfo } from './authentication'
+export { navigateBack } from './navigate'
+export { default as router } from './router'
+export { default as createCore } from './createCore'
+
+export type { ComponentCustomProperties } from './createCore'
+export type { UserInfo } from './authentication'
